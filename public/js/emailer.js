@@ -6,14 +6,11 @@ $(document).ready(function(){
     // Grab the elements from the form to make up
     // an object containing name, email and message
     var data = { 
-      name: document.getElementById('name').value, 
-      email: document.getElementById('email').value,
+      name: document.getElementById('name').value + '<' + document.getElementById('email').value + '>', 
       message: document.getElementById('message').value
     }
-    
-    console.log(data);
 
-    $.post("send", document.getElementById('message').value, function(object) {
+    $.post("send", JSON.stringify(data), function(object) {
         $('#response').html('Email sent!').addClass('success').fadeIn('fast');
       })
       .fail(function(object, error) {
