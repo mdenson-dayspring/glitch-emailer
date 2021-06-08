@@ -10,7 +10,7 @@
     "body-parser": "*",
     "express": "^4.15.2",
     "moment": "*",
-    "openpgp": "^2.5.13",
+    "openpgp": "^4.3.0",
     "sendgrid": "*"
   },
   "engines": {
